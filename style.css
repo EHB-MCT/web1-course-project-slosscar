@@ -1,6 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
 
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+
 html {
     background-image: url("images/snow.jpg");
     background-size: cover;
@@ -82,7 +95,7 @@ body {
 .navbar ul {
     display: flex;
     flex-direction: row;
-    margin-right: 10%;
+    margin-right: 2%;
     list-style-type: none;
     padding: 0;
     gap: 8px;
