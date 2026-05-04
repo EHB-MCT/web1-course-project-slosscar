@@ -1,59 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Oscar Slosse - Belgische student en barman uit Brussel, geïnteresseerd in webdesign en game design. Lees mijn biografie, bekijk mijn ervaring en hobby's." />
         <link rel="stylesheet" href="style.css" />
         <title>Oscar Slosse - Biografie</title>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="nav">
+        <nav class="nav">
+            <div class="nav-brand">
                 <div class="pfp">
-                    <img src="images/sip.jpg" alt="profiel foto" width="150px" />
+                    <img src="images/sip.jpg" alt="Profielfoto van Oscar Slosse" />
                 </div>
-                <div class="flex">
-                    <div class="naam">
-                        <h1>Oscar Slosse</h1>
-                        <div class="contact-info">
-                            <span>Blijdschapstraat 6</span>
-                            <span><a 0490195625>0490 19 56 25</a></span>
-                            <span><a oscar.slosse@gmail.com>oscar.slosse@gmail.com</a></span>
-                        </div>
-                    </div>
-                    <div class="navbar">
-                        <ul>
-                            <li><a href="index.html">Biografie</a></li>
-                            <li><a href="index.html">Ervaring</a></li>
-                            <li><a href="index.html">Hobby's</a></li>
-                        </ul>
+                <div class="naam">
+                    <h1>Oscar Slosse</h1>
+                    <div class="contact-info">
+                        <span>Blijdschapstraat 6, Brussel</span>
+                        <span><a +32490195625>0490 19 56 25</a></span>
+                        <span><a oscar.slosse@gmail.com>oscar.slosse@gmail.com</a></span>
                     </div>
                 </div>
             </div>
-            <div class="bio">
-                <div class="bio-layout">
-                    <div class="hero">
-                        <h3>Biografie</h3>
-                        <p>
-                            Ik ben 22 jaar en van Belgische afkomst. Ik groeide op in België en ben altijd omringd geweest door creativiteit en technologie. Van jongs af aan was ik gefascineerd door digitale werelden en verhalen die mensen meeslepen in een andere realiteit.
-                        </p>
-                        <p>
-                            Momenteel werk ik als barman in de horeca, waar ik dagelijks in contact kom met allerlei mensen. Die job heeft me geleerd om sociaal, flexibel en stressbestendig te zijn. Ik haal energie uit het creëren van een aangename sfeer en het snel inspelen op wat mensen nodig hebben.
-                        </p>
-                        <p>
-                            Naast mijn werk studeer ik en ontwikkel ik mezelf verder in de digitale wereld. Ik ben geïnteresseerd in webdesign, game design en alles wat te maken heeft met het creëren van ervaringen. Op lange termijn wil ik mij specialiseren in game design, met een specifieke focus op horror games. Ik ben gefascineerd door hoe sfeer, spanning en geluid samenkomen om een onvergetelijke beleving te creëren voor spelers.
-                        </p>
-                    </div>
-                    <div class="imgwrapper">
-                        <div class="img1">
-                            <img src="images/drink.jpg" alt="linker foto" />
-                        </div>
-                        <div class="img2">
-                            <img src="images/dog.jpg" alt="rechter foto" />
-                        </div>
-                    </div>
+            <button class="hamburger" aria-label="Toggle navigatie" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Biografie</a></li>
+                    <li><a href="ervaring.html">Ervaring</a></li>
+                    <li><a href="hobby.html">Hobby's</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="page-content">
+            <div class="page-header">
+                <h2>Biografie</h2>
+                <p class="subtitle">Over mij</p>
+            </div>
+            <div class="bio-layout">
+                <div class="hero">
+                    <p>
+                        Ik ben 22 jaar en van Belgische afkomst. Ik groeide op in België en ben altijd omringd geweest door creativiteit en technologie. Van jongs af aan was ik gefascineerd door digitale werelden en verhalen die mensen meeslepen in een andere realiteit.
+                    </p>
+                    <p>
+                        Momenteel werk ik als barman bij Grand Canal, een bar dicht bij Tour & Taxis in Brussel. Die job heeft me geleerd om sociaal, flexibel en stressbestendig te zijn. Ik haal energie uit het creëren van een aangename sfeer en het snel inspelen op wat mensen nodig hebben.
+                    </p>
+                    <p>
+                        Naast mijn werk studeer ik en ontwikkel ik mezelf verder in de digitale wereld. Ik ben geïnteresseerd in games en alles wat te maken heeft met het creëren van ervaringen. Op lange termijn wil ik mij specialiseren in game design, met een specifieke focus op horror games.
+                    </p>
+                </div>
+                <div class="imgwrapper">
+                    <img src="images/drink.jpg" alt="Oscar als barman bij Grand Canal" />
+                    <img src="images/dog.jpg" alt="Oscar in zijn vrije tijd" />
                 </div>
             </div>
-        </div>
+        </main>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav').classList.toggle('nav-open');
+                document.querySelector('.hamburger').classList.toggle('active');
+            }
+        </script>
     </body>
 </html>

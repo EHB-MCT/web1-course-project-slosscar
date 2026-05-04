@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="De hobby's van Oscar Slosse - gaming, horror game design, webdesign en klimmen. Ontdek wat hem drijft buiten zijn werk." />
+        <link rel="stylesheet" href="style.css" />
+        
+        <title>Oscar Slosse - Hobby's</title>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="pfp">
+                    <img src="images/sip.jpg" alt="Profielfoto van Oscar Slosse" />
+                </div>
+                <div class="naam">
+                    <h1>Oscar Slosse</h1>
+                    <div class="contact-info">
+                        <span>Blijdschapstraat 6, Brussel</span>
+                        <span><a tel:+32490195625>0490 19 56 25</a></span>
+                        <span><a mailto:oscar.slosse@gmail.com>oscar.slosse@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigatie" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Biografie</a></li>
+                    <li><a href="ervaring.html">Ervaring</a></li>
+                    <li><a href="hobby.html" class="active">Hobby's</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hobby-scroll-wrapper">
+
+            
+            <section class="hobby-section section-digital">
+                <div class="hobby-section-inner">
+                    <h2 class="section-title">Gaming</h2>
+                    <p class="section-intro">Van jongs af aan ben ik gefascineerd door video games. Dit zijn mijn drie favorieten.</p>
+                    <div class="hobby-grid">
+                        <div class="hobby-card" style="background-image: url('images/terraria.jpg');">
+                            <div class="hobby-card-overlay">
+                                <h4>Terraria</h4>
+                                <p>Ik ben verliefd op de 2D artstijl, de eindeloze creativiteit die je hebt in hoe je speelt en bouwt, en de soundtrack die perfect bij elke sfeer past.</p>
+                            </div>
+                        </div>
+                        <div class="hobby-card" style="background-image: url('images/xcom.jpg');">
+                            <div class="hobby-card-overlay">
+                                <h4>XCOM 2</h4>
+                                <p>Ik ben een grote fan van science fiction en XCOM 2 combineert dat met mijn favoriete strategische gameplay.</p>
+                            </div>
+                        </div>
+                        <div class="hobby-card" style="background-image: url('images/mordhau.jpg');">
+                            <div class="hobby-card-overlay">
+                                <h4>Mordhau</h4>
+                                <p>Soms wil ik gewoon iets eenvoudigs waar ik met een zwaard kan inslaan. Mordhau is precies dat - puur chaos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-hint">
+                    <svg viewBox="0 0 24 24" stroke-width="1.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    scroll
+                </div>
+            </section>
+
+            
+            <section class="hobby-section section-klimmen" id="section-klimmen">
+                <div class="hobby-section-inner">
+                    <h2 class="section-title">Klimmen</h2>
+                    <div class="klimmen-layout">
+                        <p class="section-intro" style="margin-bottom:0;">
+                            In 2024 ben ik begonnen met klimmen en het heeft me meteen gegrepen. Als vakantie trek ik met mijn vrienden naar Fontainebleau in Frankrijk, een van de mooiste klimgebieden ter wereld. We kamperen er en klimmen overdag tussen de rotsblokken in het bos – de perfecte combinatie van natuur, sport en avontuur.
+                        </p>
+                        <div class="klimmen-photo">
+                            <img src="images/fontainbleau.jpg" alt="Uitzicht vanop de rotsen in Fontainebleau" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <script>//ai gebruik !!
+            function toggleMenu() {
+                document.querySelector('.nav').classList.toggle('nav-open');
+                document.querySelector('.hamburger').classList.toggle('active');
+            }
+
+            const nav = document.querySelector('.nav');
+            const wrapper = document.querySelector('.hobby-scroll-wrapper');
+            const klimmenSection = document.getElementById('section-klimmen');
+
+            wrapper.addEventListener('scroll', function () {
+                const wrapperTop = wrapper.getBoundingClientRect().top;
+                const klimmenTop = klimmenSection.getBoundingClientRect().top - wrapperTop;
+                const threshold = wrapper.clientHeight * 0.5;
+                if (klimmenTop <= threshold) {
+                    nav.classList.add('nav-green');
+                } else {
+                    nav.classList.remove('nav-green');
+                }
+            });
+        </script>
+    </body>
+</html>

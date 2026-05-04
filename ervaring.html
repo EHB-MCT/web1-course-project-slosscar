@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Opleiding en werkervaring van Oscar Slosse - ASO Humane Wetenschappen aan Atheneum Brussel, buitenlandse ervaring en barman bij Grand Canal." />
+        <link rel="stylesheet" href="style.css" />
+        <title>Oscar Slosse - Ervaring</title>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="pfp">
+                    <img src="images/sip.jpg" alt="Profielfoto van Oscar Slosse" />
+                </div>
+                <div class="naam">
+                    <h1>Oscar Slosse</h1>
+                    <div class="contact-info">
+                        <span>Blijdschapstraat 6, Brussel</span>
+                        <span><a +32490195625>0490 19 56 25</a></span>
+                        <span><a oscar.slosse@gmail.com>oscar.slosse@gmail.com</a></span>
+                    </div>
+                </div>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigatie" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Biografie</a></li>
+                    <li><a href="ervaring.html" class="active">Ervaring</a></li>
+                    <li><a href="hobby.html">Hobby's</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="page-content">
+            <div class="page-header">
+                <h2>Ervaring</h2>
+                <p class="subtitle">Opleiding & werkervaring</p>
+            </div>
+
+            <p class="timeline-section-label">Opleiding</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <h4>ASO Humane Wetenschappen</h4>
+                        <p class="meta">Atheneum Brussel | 2015 - 2022</p>
+                        <p>Secundaire opleiding in de richting Humane Wetenschappen. Afgestudeerd in 2022 met een sterke basis in sociale wetenschappen en cultuur.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <h4>Buitenlandse ervaring</h4>
+                        <p class="meta">2022 - 2023 | 9 maanden</p>
+                        <p>Na mijn afstuderen ben ik negen maanden naar het buitenland gegaan. Ik heb er veel nieuwe mensen leren kennen, Frans leren spreken en mijn Engels verder verfijnd.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="timeline-section-label">Werk</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-card">
+                        <h4>Barman - Grand Canal</h4>
+                        <p class="meta">Brussel, dicht bij Tour & Taxis | 2024 - heden</p>
+                        <p>Klantenservice, gasten bedienen en cocktails maken in een drukke bar. Deze job leerde me omgaan met hoge werkdruk, snel schakelen en een aangename sfeer creëren voor de gasten.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script>
+            function toggleMenu() {
+                document.querySelector('.nav').classList.toggle('nav-open');
+                document.querySelector('.hamburger').classList.toggle('active');
+            }
+        </script>
+    </body>
+</html>
